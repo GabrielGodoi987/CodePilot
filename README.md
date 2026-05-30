@@ -194,3 +194,9 @@ Entrevistas abertas? Envia notification com base nas preferências do usuário(T
 - approved
 - rejected
 - canceled
+
+# MVP - Codepilot
+
+- é possível criar um usuário
+- é possível criar uma company
+- É possível criar e agendar uma interview
