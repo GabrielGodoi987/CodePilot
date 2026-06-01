@@ -15,8 +15,8 @@ Uma plataforma onde:
 
 - Nest.js => Para o backend ou express
 - PostgresSQl => Para acesso a dados
-- Redis
-- Docker
+- Redis => Processamento  de filas utilizando BullMQ
+- Docker => Para empacotar a aplicação e deixar a aplicação portável
 
 ## Tecnologia frotend
 
@@ -28,7 +28,7 @@ Uma plataforma onde:
 
 ## Básicas
 
-- login JWT
+- login JWT(RBAC e ACL)
 - empresas
 - candidatos
 - desafios
@@ -84,7 +84,6 @@ Uma plataforma onde:
 
 - name
 - rate -> Baseado na quantidade de aprovações
-- openInterviews[]
 - interviews[]
 - members: CompanyMember[]
 

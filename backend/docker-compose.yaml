@@ -1,5 +1,5 @@
 services:
-  backend:
+  app:
     build: .
     ports:
       - "3000:3000"
@@ -19,4 +19,23 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7.4-alpine
+    restart: unless-stopped
+    ports:
+      - "6979:6979"
+    volumes:
+      - redis_data:/data
+    command: redis-server --requirepass jesus_is_king --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "jesus_is_king", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  redis_data:
+    driver: locpal
+  postgres_data: {}

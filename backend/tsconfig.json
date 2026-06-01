@@ -4,7 +4,7 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
-    "target": "es2022",
+    "target": "esnext",
     "module": "Node16",
     "moduleResolution": "Node16",
     "types": ["node"],
